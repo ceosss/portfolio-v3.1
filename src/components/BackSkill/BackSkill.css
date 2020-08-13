@@ -1,0 +1,129 @@
+.holder {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.back-heading {
+  flex-shrink: 0;
+  width: 200px;
+  margin-right: 70px;
+  color: #007bff;
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.back-content {
+  width: 80%;
+}
+.back-content p {
+  max-width: 650px;
+  padding: 0 10px 40px 10px;
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+}
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.skill-heading {
+  flex-shrink: 0;
+  width: 200px;
+  margin-right: 70px;
+  color: #007bff;
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.skill-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: 650px;
+  justify-content: flex-start;
+}
+
+.skill-div {
+  display: flex;
+  flex-direction: column;
+  padding-right: 50px;
+}
+
+.skill-div p {
+  margin: 0;
+  padding: 4px 0;
+  font-weight: 300;
+  /* font-size: 18px; */
+  /* line-height: 24px; */
+}
+
+.skill-div span {
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 850px) {
+  .skill-content {
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+  }
+  .skill-div {
+    flex: 50% 50%;
+  }
+}
+
+/* @media screen and (max-width: 625px) {
+} */
+
+@media screen and (max-width: 580px) {
+  .skill-div {
+    flex: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .holder {
+    height: unset;
+  }
+  .back-content p {
+    padding-left: 15px;
+  }
+
+  .background,
+  .skills {
+    flex-direction: column;
+  }
+  .skill-content,
+  .back-content {
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    width: 100%;
+    font-size: 14px;
+  }
+  .skill-content {
+    justify-content: unsafe;
+  }
+  .skill-content div {
+    padding: 25px;
+  }
+  .skill-heading,
+  .back-heading {
+    margin: 15px 0;
+    padding: 10px 15px;
+    text-align: left;
+  }
+}

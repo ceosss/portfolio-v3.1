@@ -1,39 +1,50 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
-import "./../css/main.scss"
+import React, { useState } from "react"
+import Themer from "../components/Themer/Themer"
+import Intro from "../components/Intro/Intro"
+import BackSkill from "../components/BackSkill/BackSkill"
+import Experience from "../components/Experience/Experience"
+import Projects from "../components/Projects/Projects"
+import Footer from "../components/Footer/Footer"
+import Form from "../components/Form/Form"
+import Fade from "react-reveal/Fade"
 
-const Home = ({
-  data: {
-    file: {
-      childImageSharp: { fluid },
-    },
-  },
-}) => {
-  console.log(fluid)
+import "../css/App.css"
+import "../css/main.scss"
+
+const Home = () => {
+  const [dark, setDark] = useState(false)
+  const themeChange = value => {
+    setDark(value)
+  }
   return (
-    <div className="home">
-      <h1>Hello From Swaraj</h1>
-      <div className="img">
-        <Img fluid={fluid} />
+    <div className={`App ${dark && "dark"}`}>
+      <Fade duration={1000}>
+        <div className="introd">
+          <Themer themeChange={themeChange} dark={dark} />
+          <Intro />
+        </div>
+      </Fade>
+
+      <div className="back-skill">
+        <BackSkill />
       </div>
-      <div className="btn">
-        <Link to="/blogs">Blog</Link>
+
+      <Fade duration={1000}>
+        <div className="exp-div">
+          <Experience />
+        </div>
+      </Fade>
+      <div className="projects-div">
+        <Projects />
       </div>
+      <Fade duration={1000}>
+        <Form dark={dark} />
+      </Fade>
+      <Fade duration={1000}>
+        <Footer />
+      </Fade>
     </div>
   )
 }
 
 export default Home
-
-export const query = graphql`
-  {
-    file(relativePath: { eq: "Public.jpeg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`

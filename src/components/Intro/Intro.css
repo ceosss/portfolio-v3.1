@@ -1,0 +1,75 @@
+.intro {
+  height: 90vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.intro img {
+  width: 0.8em;
+  vertical-align: baseline;
+  padding: 0 10px;
+}
+
+.greet {
+  height: 30vh;
+}
+
+.introduction {
+  height: 30vh;
+  line-height: 60px;
+  max-width: 700px;
+  font-size: 40px;
+}
+
+.introduction span {
+  font-weight: 600;
+}
+.contact {
+  height: 30vh;
+  font-size: 20px;
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.contact img {
+  width: 2rem;
+  vertical-align: bottom;
+}
+
+.contact a {
+  transition: all 0.2s ease-in-out;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  padding: 2px 3px;
+  text-decoration: none;
+  box-shadow: inset 0 -3px 0 #007bff;
+}
+
+.contact a:hover {
+  box-shadow: inset 0 -33px 0 0 #007bff;
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .greet h1 {
+    font-size: 50px;
+  }
+  .introduction {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .introduction {
+    font-size: 25px;
+    line-height: 50px;
+  }
+}
