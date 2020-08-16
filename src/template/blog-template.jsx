@@ -40,7 +40,7 @@ const BlogTemp = props => {
         <ReactMarkdown source={blog.content} />
       </div>
       <div className="btn">
-        <Link to="/blogs">GO BACK</Link>
+        <Link to="/blogs">ALL BLOGS</Link>
       </div>
     </section>
   )

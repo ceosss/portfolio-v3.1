@@ -15,6 +15,7 @@
 
 .content {
   margin-top: -15px;
+  padding-top: 15px;
   font-weight: 300;
   font-size: 1rem;
   max-width: 650px;
@@ -36,6 +37,7 @@
 .project .desc p {
   font-size: 14px;
   line-height: 18px;
+  padding: 16px 0 14px 0;
 }
 .image {
   display: flex;

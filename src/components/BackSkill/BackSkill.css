@@ -52,6 +52,7 @@
 }
 .skill-content {
   width: 100%;
+  margin-top: -10px;
   display: flex;
   flex-direction: row;
   max-width: 650px;

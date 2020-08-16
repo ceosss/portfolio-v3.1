@@ -1,17 +1,22 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import ReactMarkdown from "react-markdown"
 import "./../css/Blogs.scss"
+import Themer from "../components/Themer/Themer"
 
 const Blogs = ({
   data: {
     allStrapiBlogs: { nodes: blogs },
   },
 }) => {
-  const REACT_IMAGE_BASE_URL = "http://localhost:1337"
+  const [dark, setDark] = useState(false)
+  const themeChange = value => {
+    setDark(value)
+  }
+
   return (
-    <div className="blog-page">
+    <div className={`blog-page ${dark && "dark"}`}>
+      <Themer themeChange={themeChange} dark={dark} />
       <h1>BLOG </h1>
       <div className="blog-list">
         {blogs.map(blog => (
@@ -28,15 +33,6 @@ const Blogs = ({
                   <em>{blog.date}</em>
                 </p>
               </span>
-
-              {/* <article>
-            <ReactMarkdown
-              source={blog.content}
-              transformImageUri={uri =>
-                uri.startsWith("http") ? uri : `${REACT_IMAGE_BASE_URL}${uri}`
-              }
-            />
-          </article> */}
             </Link>
           </div>
         ))}

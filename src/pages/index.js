@@ -4,6 +4,7 @@ import Intro from "../components/Intro/Intro"
 import BackSkill from "../components/BackSkill/BackSkill"
 import Experience from "../components/Experience/Experience"
 import Projects from "../components/Projects/Projects"
+import BlogPreview from "../components/BlogPreview/BlogPreview"
 import Footer from "../components/Footer/Footer"
 import Form from "../components/Form/Form"
 import Fade from "react-reveal/Fade"
@@ -37,6 +38,9 @@ const Home = () => {
       <div className="projects-div">
         <Projects />
       </div>
+      <Fade duration={1000}>
+        <BlogPreview />
+      </Fade>
       <Fade duration={1000}>
         <Form dark={dark} />
       </Fade>

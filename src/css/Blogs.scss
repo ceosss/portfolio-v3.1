@@ -4,9 +4,13 @@
 }
 .blog-page {
   font-family: "Montserrat", sans-serif;
+  height: 100%;
+  transition: 400ms ease-in-out;
   h1 {
     margin: 30px;
     text-align: center;
+    color: #007bff;
+    letter-spacing: 2px;
   }
 }
 .blog-list {
@@ -94,5 +98,20 @@
   }
   @media screen and (max-width: 770px) {
     grid-template-columns: 1fr;
+  }
+}
+
+.dark {
+  .blog-list {
+    .s-blog-list {
+      background-color: #1c2231;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      a {
+        color: white;
+      }
+      span p:first-child {
+        background-color: #2f3951;
+      }
+    }
   }
 }
