@@ -31,6 +31,13 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {},
           },
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              linkImagesToOriginal: false,
+            },
+          },
+          `gatsby-remark-images-zoom`,
         ],
       },
     },

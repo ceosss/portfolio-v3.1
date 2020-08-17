@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { useSelector } from "react-redux"
 import Themer from "../components/Themer/Themer"
 import Intro from "../components/Intro/Intro"
 import BackSkill from "../components/BackSkill/BackSkill"
@@ -13,15 +14,12 @@ import "../css/App.css"
 import "../css/main.scss"
 
 const Home = () => {
-  const [dark, setDark] = useState(false)
-  const themeChange = value => {
-    setDark(value)
-  }
+  const dark = useSelector(state => state)
   return (
     <div className={`App ${dark && "dark"}`}>
       <Fade duration={1000}>
         <div className="introd">
-          <Themer themeChange={themeChange} dark={dark} />
+          <Themer />
           <Intro />
         </div>
       </Fade>

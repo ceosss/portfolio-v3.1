@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React from "react"
+import { useSelector } from "react-redux"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import "./../css/Blogs.scss"
@@ -9,14 +10,11 @@ const Blogs = ({
     allStrapiBlogs: { nodes: blogs },
   },
 }) => {
-  const [dark, setDark] = useState(false)
-  const themeChange = value => {
-    setDark(value)
-  }
+  const dark = useSelector(state => state)
 
   return (
     <div className={`blog-page ${dark && "dark"}`}>
-      <Themer themeChange={themeChange} dark={dark} />
+      <Themer />
       <h1>BLOG </h1>
       <div className="blog-list">
         {blogs.map(blog => (

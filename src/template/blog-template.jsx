@@ -4,6 +4,8 @@ import Img from "gatsby-image"
 import readingTime from "reading-time"
 import ReactMarkdown from "react-markdown"
 import Prism from "prismjs"
+import { useSelector } from "react-redux"
+import Themer from "../components/Themer/Themer"
 
 import "./../css/blog-template.scss"
 
@@ -11,12 +13,18 @@ const BlogTemp = props => {
   useEffect(() => {
     Prism.highlightAll()
   }, [])
+
+  const dark = useSelector(state => state)
   const blog = props.data.blog
 
   const profileImg = props.data.file.childImageSharp.fixed
   console.log(blog)
   return (
-    <section className="single-blog">
+    <section className={`single-blog ${dark && "dark"}`}>
+      <div className="themer-div">
+        <Themer />
+      </div>
+
       <div className="head">
         <h1>{blog.title}</h1>
       </div>
