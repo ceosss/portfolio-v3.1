@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { useSelector } from "react-redux"
 import Themer from "../components/Themer/Themer"
 import Intro from "../components/Intro/Intro"
@@ -9,6 +9,7 @@ import BlogPreview from "../components/BlogPreview/BlogPreview"
 import Footer from "../components/Footer/Footer"
 import Form from "../components/Form/Form"
 import Fade from "react-reveal/Fade"
+import SEO from "../components/SEO/SEO"
 
 import "../css/App.css"
 import "../css/main.scss"
@@ -17,6 +18,10 @@ const Home = () => {
   const dark = useSelector(state => state)
   return (
     <div className={`App ${dark && "dark"}`}>
+      <SEO
+        title="Home"
+        description="Portfolio Website of Swaraj Samant Singh, a Full Stack Software Engineer"
+      />
       <Fade duration={1000}>
         <div className="introd">
           <Themer />

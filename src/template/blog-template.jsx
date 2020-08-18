@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown"
 import Prism from "prismjs"
 import { useSelector } from "react-redux"
 import Themer from "../components/Themer/Themer"
+import SEO from "../components/SEO/SEO"
 
 import "./../css/blog-template.scss"
 
@@ -18,39 +19,42 @@ const BlogTemp = props => {
   const blog = props.data.blog
 
   const profileImg = props.data.file.childImageSharp.fixed
-  console.log(blog)
-  return (
-    <section className={`single-blog ${dark && "dark"}`}>
-      <div className="themer-div">
-        <Themer />
-      </div>
 
-      <div className="head">
-        <h1>{blog.title}</h1>
-      </div>
-      <div className="desc">
-        <Img fixed={profileImg} />
-        <span className="name-date">
-          <p>Swaraj</p>
-          <p>•</p>
-          <p>{blog.date}</p>
-        </span>
-        <span className="cat-read">
-          <p>{blog.category}</p>
-          <p>•</p>
-          <p> {readingTime(blog.content).text}</p>
-        </span>
-      </div>
-      <div className="featured-image">
-        <Img fluid={blog.image.childImageSharp.fluid} />
-      </div>
-      <div className="content">
-        <ReactMarkdown source={blog.content} />
-      </div>
-      <div className="btn">
-        <Link to="/blogs">ALL BLOGS</Link>
-      </div>
-    </section>
+  return (
+    <div className="single-blog-page">
+      <section className={`single-blog ${dark && "dark"}`}>
+        <SEO title={blog.title} description={blog.description} />
+        <div className="themer-div">
+          <Themer />
+        </div>
+
+        <div className="head">
+          <h1>{blog.title}</h1>
+        </div>
+        <div className="desc">
+          <Img fixed={profileImg} />
+          <span className="name-date">
+            <p>Swaraj</p>
+            <p>•</p>
+            <p>{blog.date}</p>
+          </span>
+          <span className="cat-read">
+            <p>{blog.category}</p>
+            <p>•</p>
+            <p> {readingTime(blog.content).text}</p>
+          </span>
+        </div>
+        <div className="featured-image">
+          <Img fluid={blog.image.childImageSharp.fluid} />
+        </div>
+        <div className="content">
+          <ReactMarkdown source={blog.content} />
+        </div>
+        <div className="btn">
+          <Link to="/blogs">ALL BLOGS</Link>
+        </div>
+      </section>
+    </div>
   )
 }
 
