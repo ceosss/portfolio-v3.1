@@ -9,11 +9,16 @@ const Experience = () => {
       <div className="experience">
         <div className="heading">EXPERIENCE</div>
         <div className="content">
-          <div className="company-time">
-            <p id="company">WTF-DIGITAL WAITER</p>
-            <p>May 2020 - Jul 2020</p>
-          </div>
-          <div className="role">SDE Intern</div>
+          {experienceDetails.map(exp => (
+            <>
+              <div className="company-time">
+                <p id="company">{exp.company}</p>
+                <p>{exp.duration}</p>
+              </div>
+              <div className="role">{exp.position}</div>
+            </>
+          ))}
+
           <div className="resume">
             <a href={PDF} target="_blank" rel="noopener noreferrer">
               View My Resume <img src={Point} alt="point" className="emoji" />{" "}
@@ -24,5 +29,18 @@ const Experience = () => {
     </>
   )
 }
+
+export const experienceDetails = [
+  {
+    company: "INSPIRIT VR",
+    duration: "Aug 2020 - Present",
+    position: "Full Stack Developer",
+  },
+  {
+    company: "WTF-DIGITAL WAITER",
+    duration: "May 2020 - Jul 2020",
+    position: "Backend Developer",
+  },
+]
 
 export default Experience

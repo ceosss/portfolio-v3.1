@@ -49,6 +49,14 @@ const Projects = () => {
 
 export const projectsDetails = [
   {
+    title: "EXTRACTIFY",
+    description:
+      "Extractify is a tool to extract text from pdf. You can upload the pdf and extractify will sprinkle it's magic to provide you with the extracted text. You'll also be able to see the list of previoulsy converted Pdf files",
+    github: "https://github.com/ceosss/extractify",
+    live: "https://extractify-258bb.firebaseapp.com/",
+    image: require("./EXTRACTIFY.png"),
+  },
+  {
     title: "MINUTE NEWS",
     description:
       "Minute-News App provides the latest news from 1000+ most read & reliable sources from all across the world. You can even filter down the news to the hottest topics around the world. Stay updated with current news with the Minute-News App.",
