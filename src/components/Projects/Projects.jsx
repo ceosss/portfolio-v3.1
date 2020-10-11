@@ -1,6 +1,6 @@
-import React from "react";
-import Fade from "react-reveal/Fade";
-import "./Projects.css";
+import React from "react"
+import Fade from "react-reveal/Fade"
+import "./Projects.css"
 
 const Projects = () => {
   return (
@@ -44,8 +44,8 @@ const Projects = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
 export const projectsDetails = [
   {
@@ -54,7 +54,7 @@ export const projectsDetails = [
       "Minute-News App provides the latest news from 1000+ most read & reliable sources from all across the world. You can even filter down the news to the hottest topics around the world. Stay updated with current news with the Minute-News App.",
     github: "https://github.com/ceosss/news-app",
     live: "https://minute-news.web.app/",
-    image: require("./MINUTE_NEWS.svg"),
+    image: require("./MINUTE_NEWS.png"),
   },
   {
     title: "CRWN-CLOTHING",
@@ -62,7 +62,7 @@ export const projectsDetails = [
       "E-commerce application similar to Shopify using React, Redux, React Hooks, React Router, Firebase, Stripe + more. This is a full-stack app (MERN stack), using Firebase.",
     github: "https://github.com/ceosss/crwn-clothing",
     live: "http://crwnclothingapp.herokuapp.com/",
-    image: require("./CRWN_CLOTHING.svg"),
+    image: require("./CRWN_CLOTHING.png"),
   },
   {
     title: "COVID-19 TRACKER",
@@ -70,7 +70,7 @@ export const projectsDetails = [
       "Track COVID-19 Local and Global Coronavirus cases with live status of active, recoveries and death counts plus visualization.",
     github: "https://github.com/ceosss/covid19-tracker",
     live: "http://c19tracker-webapp.herokuapp.com/",
-    image: require("./COVID_19_TRACKER.svg"),
+    image: require("./COVID_19_TRACKER.png"),
   },
   {
     title: "EMOJI-SHORTENER",
@@ -78,7 +78,7 @@ export const projectsDetails = [
       "A URL is a simple tool that takes a long URL and turns it into a short and convenient URL. To make it more interesting, I added emoji flavour to my link shortener.",
     github: "https://github.com/ceosss/emoji-shortner",
     live: "http://emojishort.herokuapp.com/",
-    image: require("./EMOJI_SHORTENER.svg"),
+    image: require("./EMOJI_SHORTENER.png"),
   },
   {
     title: "KIIT-ICT",
@@ -86,7 +86,7 @@ export const projectsDetails = [
       "A Web App for my College to Manage Students can fill form online and submit their laptop to ICT Department and track the status from anywhere. Admins can send pickup message reminders to the user that too only after authentication.",
     github: "https://github.com/ceosss/KIIT-ICT",
     live: "https://kiit-ict.herokuapp.com/",
-    image: require("./KIIT_ICT.svg"),
+    image: require("./KIIT_ICT.png"),
   },
   {
     title: "WEATHER APP",
@@ -94,8 +94,8 @@ export const projectsDetails = [
       "User Authenticates using Google Account and then the app automatically detects the user's location and uses API to fetch weather and forecasts of that location.",
     github: "https://github.com/ceosss/WeatherApp",
     live: "https://my-weather-app-v1.herokuapp.com/",
-    image: require("./WEATHER_APP.svg"),
+    image: require("./WEATHER_APP.png"),
   },
-];
+]
 
-export default Projects;
+export default Projects
